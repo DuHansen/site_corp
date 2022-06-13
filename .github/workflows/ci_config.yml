@@ -15,7 +15,7 @@ jobs:
     - name: basic settings
       run:
         apt-get install curl -y
-        apt-get install git-y
+        apt-get install git -y
         apt-get install inzip -y
         apt-get install zip -y
         apt-get install xz-utils
