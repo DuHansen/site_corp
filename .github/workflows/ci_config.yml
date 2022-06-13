@@ -14,13 +14,14 @@ jobs:
     - uses: actions/checkout@v2
     - name: basic settings
       run:
+        apt update
         apt-get install curl -y
         apt-get install git -y
-        apt-get install inzip -y
+        apt-get install unzip -y
         apt-get install zip -y
         apt-get install xz-utils
     - name: Mount flutter                      
-      run: it clone -b master https://github.com/flutter/flutter.git
+      run: git clone -b master https://github.com/flutter/flutter.git
     - name: Show version
       run: ./flutter/bin/flutter --version
     - name: Install dependencies
